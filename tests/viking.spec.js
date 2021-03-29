@@ -30,28 +30,28 @@ describe("Soldier", () => {
       expect(soldier.attack.length).toEqual(0);
     });
 
-    // it('should return the strength property of the Soldier', () => {
-    //   expect(soldier.attack()).toEqual(strength);
-    // });
+    it("should return the strength property of the Soldier", () => {
+      expect(soldier.attack()).toEqual(strength);
+    });
   });
 
   describe("receiveDamage() method", () => {
-    // it('should be a function', () => {
-    //   expect(typeof soldier.receiveDamage).toBe('function');
-    // });
-    //
-    // it('should receive 1 argument (the damage)', () => {
-    //   expect(soldier.receiveDamage.length).toEqual(1);
-    // });
-    //
-    // it('should remove the received damage from the health property', () => {
-    //   soldier.receiveDamage(50);
-    //   expect(soldier.health).toEqual(health - 50);
-    // });
-    //
-    // it("shouldn't return anything", () => {
-    //   expect(soldier.receiveDamage(50)).toEqual(undefined);
-    // });
+    it("should be a function", () => {
+      expect(typeof soldier.receiveDamage).toBe("function");
+    });
+
+    it("should receive 1 argument (the damage)", () => {
+      expect(soldier.receiveDamage.length).toEqual(1);
+    });
+
+    it("should remove the received damage from the health property", () => {
+      soldier.receiveDamage(50);
+      expect(soldier.health).toEqual(health - 50);
+    });
+
+    it("shouldn't return anything", () => {
+      expect(soldier.receiveDamage(50)).toEqual(undefined);
+    });
   });
 });
 

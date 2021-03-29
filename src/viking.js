@@ -7,7 +7,9 @@ class Soldier {
   attack() {
     return this.strength;
   }
-  receiveDamage() {}
+  receiveDamage(damage) {
+    this.health = this.health - damage;
+  }
 }
 
 // Viking
