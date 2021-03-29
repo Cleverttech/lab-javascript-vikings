@@ -44,7 +44,7 @@ class Saxon extends Soldier {
     if (this.health > 1) {
       return `A Saxon has received ${damage} points of damage`;
     } else if (this.health <= 0) {
-      return `A Saxon has died in act of combat`;
+      return `A Saxon has died in combat`;
     }
   }
 }
@@ -61,7 +61,41 @@ class War {
   addSaxon(saxon) {
     this.saxonArmy.push(saxon);
   }
-  vikingAttack() {}
-  saxonAttack() {}
+
+  vikingAttack() {
+    let randomViking = this.vikingArmy[
+      Math.floor(Math.random() * this.vikingArmy.length)
+    ];
+
+    let randomSaxon = this.saxonArmy[
+      Math.floor(Math.random() * this.saxonArmy.length)
+    ];
+
+    let output = randomSaxon.receiveDamage(randomViking.strength);
+
+    if (randomSaxon.health <= 0) {
+      this.saxonArmy.splice(this.saxonArmy.indexOf(randomSaxon), 1);
+    }
+
+    return output;
+  }
+
+  saxonAttack() {
+    let randomSaxon = this.saxonArmy[
+      Math.floor(Math.random() * this.saxonArmy.length)
+    ];
+
+    let randomViking = this.vikingArmy[
+      Math.floor(Math.random() * this.vikingArmy.length)
+    ];
+
+    let output = randomViking.receiveDamage(randomSaxon.strength);
+
+    if (randomViking.health <= 0) {
+      this.vikingArmy.splice(this.vikingArmy.indexOf(randomSaxon), 1);
+    }
+
+    return output;
+  }
   showStatus() {}
 }
