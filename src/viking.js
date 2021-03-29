@@ -1,11 +1,22 @@
 // Soldier
-class Soldier {}
+class Soldier {
+  constructor(health, strength) {
+    this.health = health;
+    this.strength = strength;
+  }
+}
 
 // Viking
-class Viking {}
+class Viking {
+  constructor() {}
+}
 
 // Saxon
-class Saxon {}
+class Saxon {
+  constructor() {}
+}
 
 // War
-class War {}
+class War {
+  constructor() {}
+}
