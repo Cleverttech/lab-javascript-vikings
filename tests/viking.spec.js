@@ -65,19 +65,19 @@ describe("Viking", () => {
     viking = new Viking(name, health, strength);
   });
 
-  // it('should inherit from Soldier', () => {
-  //   expect(viking instanceof Soldier).toEqual(true);
-  // });
+  it("should inherit from Soldier", () => {
+    expect(viking instanceof Soldier).toEqual(true);
+  });
 
   describe("class", () => {
-    // it('should receive 3 arguments (name, health & strength)', () => {
-    //   expect(Viking.length).toEqual(3);
-    // });
-    //
-    // it('should receive the name property as its 1st argument', () => {
-    //   expect(viking.name).toEqual(name);
-    // });
-    //
+    it("should receive 3 arguments (name, health & strength)", () => {
+      expect(Viking.length).toEqual(3);
+    });
+
+    it("should receive the name property as its 1st argument", () => {
+      expect(viking.name).toEqual(name);
+    });
+
     // it('should receive the health property as its 2nd argument', () => {
     //   expect(viking.health).toEqual(health);
     // });

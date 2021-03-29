@@ -13,8 +13,11 @@ class Soldier {
 }
 
 // Viking
-class Viking {
-  constructor() {}
+class Viking extends Soldier {
+  constructor(name, health, strength) {
+    super(health, strength);
+    this.name = name;
+  }
 }
 
 // Saxon
